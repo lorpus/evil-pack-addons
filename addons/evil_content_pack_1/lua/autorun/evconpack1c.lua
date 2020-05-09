@@ -186,7 +186,7 @@ util.PrecacheModel("models/lsd_de/simspy.mdl")
 util.PrecacheModel("models/mm3d/empty/link/emptylink2.mdl")
 util.PrecacheModel("models/player/neckbeard.mdl")
 util.PrecacheModel("models/player/slow_alien.mdl")
-util.PrecacheModel("models/player/runescape/player_bob.mdl")
+//util.PrecacheModel("models/player/runescape/player_bob.mdl")
 util.PrecacheModel("models/breach173.mdl")
 util.PrecacheModel("models/scp096anim/player/scp096pm_raf.mdl")
 
@@ -559,7 +559,7 @@ Evil:RegisterBoss("greyman", {
 	end
 })
 
-Evil:RegisterBoss("runescapebob", {
+/*Evil:RegisterBoss("runescapebob", {
 	name        = "Runescape Bob",
 	bio         = "unused",
 	model       = "models/player/runescape/player_bob.mdl",
@@ -585,7 +585,7 @@ Evil:RegisterBoss("runescapebob", {
 			"ev_monster_kill"
 		}
 	}
-})
+})*/
 
 Evil:RegisterBoss("link", {
 	name        = "Scary Spaghetti Link",
@@ -667,7 +667,7 @@ Evil:RegisterBoss("scp096", {
 	},
 })
 
-Evil:RegisterBoss("hobo", {
+/*Evil:RegisterBoss("hobo", {
 	name        = "Crazed Drunk Hobo",
 	bio         = "unused",
 	model       = "models/player/group03/male_03.mdl",
@@ -679,7 +679,7 @@ Evil:RegisterBoss("hobo", {
 	},
 
 	ability = "explosivebottle",
-})
+})*/
 
 end) // callback
 end) // hook
