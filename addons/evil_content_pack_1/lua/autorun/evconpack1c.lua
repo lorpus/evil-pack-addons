@@ -152,6 +152,9 @@ util.PrecacheSound("evil/mrbones/monster_proximity2.mp3")
 util.PrecacheSound("evil/mrbones/proxy_ree.mp3")
 util.PrecacheSound("evil/mrbones/scare1.mp3")
 util.PrecacheSound("evil/mrbones/suitcase.mp3")
+util.PrecacheSound("evil/mrbones/rattle1.mp3")
+util.PrecacheSound("evil/mrbones/rattle2.mp3")
+util.PrecacheSound("evil/mrbones/rattle3.mp3")
 util.PrecacheSound("evil/neckbeard/bodypillow1.mp3")
 util.PrecacheSound("evil/neckbeard/bodypillow2.mp3")
 util.PrecacheSound("evil/neckbeard/katana.mp3")
@@ -203,7 +206,7 @@ Evil:RegisterBoss("mrbones", { // referred to as profiles
     model       = "models/player/skeleton.mdl", // playermodel
     runspeed    = 350, // sprinting speed of the boss
     walkspeed   = 250, // walking speed of hte boss
-    proximity_music = "evil/mrbones/monster_proximity2.mp3",
+    chase_music = "evil/mrbones/monster_proximity2.mp3",
 
     weapons     = { // what to give the boss
         "ev_monster_kill" // default insta-kill wep
@@ -214,6 +217,12 @@ Evil:RegisterBoss("mrbones", { // referred to as profiles
             victim:SetModel("models/player/skeleton.mdl")
         end
     end,
+
+    idlesounds = {
+        "evil/mrbones/rattle1.mp3",
+        "evil/mrbones/rattle2.mp3",
+        "evil/mrbones/rattle3.mp3",
+    },
 
     jumpscare = {
         mat = "evil/scares/mrbones/scare1",
@@ -555,7 +564,7 @@ Evil:RegisterBoss("greyman", {
     end
 })
 
-Evil:RegisterBoss("runescapebob", {
+/*Evil:RegisterBoss("runescapebob", {
     name        = "Runescape Bob",
     bio         = "unused",
     model       = "models/player/runescape/player_bob.mdl",
@@ -581,7 +590,7 @@ Evil:RegisterBoss("runescapebob", {
             "ev_monster_kill"
         }
     }
-})
+})*/
 
 Evil:RegisterBoss("link", {
     name        = "Scary Spaghetti Link",
@@ -663,7 +672,7 @@ Evil:RegisterBoss("scp096", {
     },
 })
 
-Evil:RegisterBoss("hobo", {
+/*Evil:RegisterBoss("hobo", {
     name        = "Crazed Drunk Hobo",
     bio         = "unused",
     model       = "models/player/group03/male_03.mdl",
@@ -675,7 +684,7 @@ Evil:RegisterBoss("hobo", {
     },
 
     ability = "explosivebottle",
-})
+})*/
 
 end) // callback
 end) // hook
