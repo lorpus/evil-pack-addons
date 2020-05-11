@@ -672,6 +672,37 @@ Evil:RegisterBoss("scp096", {
     },
 })
 
+Evil:RegisterBoss("mannequin", {
+    name        = "Mannequin",
+    model       = "models/drawingmannequin/drawingmannequin.mdl",
+    runspeed    = 350,
+    walkspeed   = 250,
+
+    weapons = {
+        "ev_monster_kill"
+    },
+
+    traits = {
+        "flashlightfreeze",
+    },
+
+    ability = "linklight",
+
+    proxy = {
+        model       = "models/drawingmannequin/drawingmannequin.mdl",
+        runspeed    = 350,
+        walkspeed   = 250,
+
+        weapons = {
+            "ev_monster_kill"
+        },
+
+        traits = {
+            "flashlightfreeze"
+        },
+    }
+})
+
 /*Evil:RegisterBoss("hobo", {
     name        = "Crazed Drunk Hobo",
     bio         = "unused",
