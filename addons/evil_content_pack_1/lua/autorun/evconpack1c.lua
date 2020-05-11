@@ -241,7 +241,7 @@ Evil:RegisterBoss("mrbones", { // referred to as profiles
             ["evil/test"] = "bruh moment"
         },
 
-        taunt_cooldown = 1,
+        taunt_cooldown = 18,
 
         start = function(proxy)
             proxy.vProxyViewOffset = proxy:GetViewOffset()
