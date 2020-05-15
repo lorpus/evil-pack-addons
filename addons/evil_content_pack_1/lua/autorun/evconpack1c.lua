@@ -181,6 +181,10 @@ util.PrecacheSound("evil/xenomorph/scream1.mp3")
 util.PrecacheSound("evil/xenomorph/scream2.mp3")
 util.PrecacheSound("evil/xenomorph/scream3.mp3")
 util.PrecacheSound("evil/xenomorph/scream4.mp3")
+util.PrecacheSound("evil/stonejoe/stone1.mp3")
+util.PrecacheSound("evil/stonejoe/stone2.mp3")
+util.PrecacheSound("evil/stonejoe/stone3.mp3")
+util.PrecacheSound("evil/stonejoe/stone4.mp3")
 util.PrecacheModel("models/pinkiepie.mdl")
 util.PrecacheModel("models/empty_link/empty_link_02.mdl")
 util.PrecacheModel("models/jazzmcfly/kantai/nt/nt.mdl")
@@ -192,6 +196,7 @@ util.PrecacheModel("models/player/slow_alien.mdl")
 util.PrecacheModel("models/player/runescape/player_bob.mdl")
 util.PrecacheModel("models/breach173.mdl")
 util.PrecacheModel("models/scp096anim/player/scp096pm_raf.mdl")
+util.PrecacheModel("models/player/griffbo/stoneguardian.mdl")
 
 hook.Add("EvilPreLoad", "RegisterPack1", function()
 
@@ -702,6 +707,45 @@ Evil:RegisterBoss("mannequin", {
         },
     }
 })
+
+Evil:RegisterBoss("stonejoe", {
+    name        = "Stone Joe",
+    model       = "models/player/griffbo/stoneguardian.mdl",
+    runspeed    = 350,
+    walkspeed   = 250,
+
+    weapons = {
+        "ev_rock"
+    },
+
+    ability = "pound",
+
+    killsounds = {
+        "physics/concrete/boulder_impact_hard1.wav",
+        "physics/concrete/boulder_impact_hard2.wav",
+        "physics/concrete/boulder_impact_hard3.wav",
+        "physics/concrete/boulder_impact_hard4.wav",
+    },
+
+    taunts = {
+        "evil/stonejoe/stone1.mp3",
+        "evil/stonejoe/stone2.mp3",
+        "evil/stonejoe/stone3.mp3",
+        "evil/stonejoe/stone4.mp3",
+    },
+
+    tauntdisplay = {
+        ["evil/stonejoe/stone1.mp3"] = "#StoneJoe_Taunt_Panic",
+        ["evil/stonejoe/stone2.mp3"] = "#StoneJoe_Taunt_Singing",
+        ["evil/stonejoe/stone3.mp3"] = "#StoneJoe_Taunt_FoundYou",
+        ["evil/stonejoe/stone4.mp3"] = "#StoneJoe_Taunt_Laughter",
+    },
+})
+
+Lang:Add("en", "#StoneJoe_Taunt_Panic", "Panic Attack")
+Lang:Add("en", "#StoneJoe_Taunt_Singing", "Singing")
+Lang:Add("en", "#StoneJoe_Taunt_FoundYou", "Found you!")
+Lang:Add("en", "#StoneJoe_Taunt_Laughter", "Laughter")
 
 /*Evil:RegisterBoss("hobo", {
     name        = "Crazed Drunk Hobo",
