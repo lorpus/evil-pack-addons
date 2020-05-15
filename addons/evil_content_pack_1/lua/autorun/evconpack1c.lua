@@ -691,7 +691,7 @@ Evil:RegisterBoss("mannequin", {
         "flashlightfreeze",
     },
 
-    ability = "linklight",
+    ability = "flashlightkiller",
 
     proxy = {
         model       = "models/drawingmannequin/drawingmannequin.mdl",
