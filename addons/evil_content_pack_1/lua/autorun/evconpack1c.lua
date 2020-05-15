@@ -643,6 +643,41 @@ Evil:RegisterBoss("scp173", {
         "evil/scp173/snap1.mp3",
         "evil/scp173/snap2.mp3",
     },
+
+    start = function(ply)
+        if CLIENT then
+            sound.PlayFile("sound/evil/scp173/stonedrag.mp3", "3d noblock", function(chan, errid, errname)
+                if IsValid(chan) then
+                    Evil._SCP173StoneDrag = chan
+                    chan:Set3DFadeDistance(640, 3500)
+                    chan:EnableLooping(true)
+                    hook.Add("Think", "Evil__SCP173StoneDrag", function()
+                        local boss = Game:GetBoss()
+                        if IsValid(boss) then
+                            chan:SetPos(boss:GetPos())
+                            Evil._SCP173StoneDrag = chan
+                            if boss:GetVelocity():Length() > 10 then
+                                chan:SetVolume(1)
+                            else
+                                chan:SetVolume(0)
+                            end
+                        end
+                    end)
+                    chan:Play()
+                else
+                    dbg.print("scp 173 audio failed", errid, errname)
+                end
+            end)
+        end
+    end,
+
+    finish = function(ply)
+        hook.Remove("Think", "Evil__SCP173StoneDrag")
+        if CLIENT and IsValid(Evil._SCP173StoneDrag) then
+            Evil._SCP173StoneDrag:Stop()
+            Evil._SCP173StoneDrag = nil
+        end
+    end,
 })
 
 Evil:RegisterBoss("scp096", {
