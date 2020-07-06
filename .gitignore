@@ -40,3 +40,13 @@ luac.out
 *.hex
 
 settings.json
+
+*.mp3
+*.wav
+*.vtx
+*.vvd
+*.phy
+*.mdl
+*.vtf
+*.vmt
+*.png
