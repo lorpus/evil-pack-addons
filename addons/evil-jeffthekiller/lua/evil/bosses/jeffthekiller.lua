@@ -57,6 +57,7 @@ BOSS.ExtraResources = {
 }
 
 function BOSS:OnKill(victim)
+    if not SERVER then return end
     self:SetLaggedMovementValue(0)
     timer.Simple(2, function()
         if IsValid(self) then
