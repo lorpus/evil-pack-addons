@@ -16,7 +16,7 @@ function ABILITY:OnUse(ply)
 end
 
 hook.Add("CanSeePlayerESP", "EvilAbilityLinkESP", function(viewer, viewed)
-    if viewer:GetNW2String("EvilAbility") == "linklight" and viewer:GetNW2Bool("EvilAbilityLinkESP") then
+    if viewer:GetNW2String("EvilAbility") == ABILITY.ID and viewer:GetNW2Bool("EvilAbilityLinkESP") then
         return true
     end
 end)
