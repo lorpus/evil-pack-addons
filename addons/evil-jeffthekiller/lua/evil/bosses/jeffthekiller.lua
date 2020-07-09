@@ -8,6 +8,8 @@ BOSS.Weapons = {
     "ev_knife"
 }
 
+BOSS.Ability = "jeff_ability"
+
 BOSS.Jumpscare = {
     Material = "evil/scares/jeff/jumpscare",
     Sound = "evil/jeffthekiller/jumpscare.mp3",
@@ -25,6 +27,7 @@ BOSS.Lang = {
 }
 
 BOSS.ExtraResources = {
+    "sound/evil/jeffthekiller/jeffscream.mp3",
     "materials/models/splinks/jeff_the_killer/char_prisonermonster_d.vmt",
     "materials/models/splinks/jeff_the_killer/char_prisonermonster_head_d.vmt",
     "materials/models/splinks/jeff_the_killer/char_prisonermonster_head_d.vtf",
@@ -59,7 +62,8 @@ BOSS.ExtraResources = {
 function BOSS:OnKill(victim)
     if not SERVER then return end
     self:SetLaggedMovementValue(0)
-    timer.Simple(2, function()
+    timer.Remove("Evil__JTK_Ability_" .. self:SteamID64())
+    timer.Create("Evil__JTK_OnKill_" .. self:SteamID64(), 2, 1, function()
         if IsValid(self) then
             self:SetLaggedMovementValue(1)
         end
