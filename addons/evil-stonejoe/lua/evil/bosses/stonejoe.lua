@@ -42,8 +42,8 @@ BOSS.Lang = {
 }
 
 BOSS.ExtraResources = {
-    "guardian.vmt",
-    "guardian.vtf",
-    "stone.vmt",
-    "stone.vtf",
+    "materials/models/griffbo/stoneguardian/guardian.vmt",
+    "materials/models/griffbo/stoneguardian/guardian.vtf",
+    "materials/models/griffbo/stoneguardian/stone.vmt",
+    "materials/models/griffbo/stoneguardian/stone.vtf",
 }

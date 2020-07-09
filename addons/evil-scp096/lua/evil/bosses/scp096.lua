@@ -40,8 +40,8 @@ BOSS.Lang = {
 }
 
 BOSS.ExtraResources = {
-    "materials/models/scp096anim.vmt",
-    "materials/models/scp096anim.vtf",
-    "materials/models/scp096_eyes.vmt",
-    "materials/models/scp096_eyes.vtf",
+    "materials/models/scp096anim/scp096.vmt",
+    "materials/models/scp096anim/scp096.vtf",
+    "materials/models/scp096anim/scp096_eyes.vmt",
+    "materials/models/scp096anim/scp096_eyes.vtf",
 }

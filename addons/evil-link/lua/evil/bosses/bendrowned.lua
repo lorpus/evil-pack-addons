@@ -33,10 +33,10 @@ BOSS.Precache = {
 }
 
 BOSS.ExtraResources = {
-	"materials/models/e_pt_li_k.vmt",
-	"materials/models/e_pt_li_k.vtf",
-	"materials/models/empty_link_texture.vmt",
-	"materials/models/empty_link_texture.vtf",
-	"materials/models/huke.vmt",
-	"materials/models/huke.vtf",
+	"materials/models/empty_link/e_pt_li_k.vmt",
+	"materials/models/empty_link/e_pt_li_k.vtf",
+	"materials/models/empty_link/empty_link_texture.vmt",
+	"materials/models/empty_link/empty_link_texture.vtf",
+	"materials/models/empty_link/huke.vmt",
+	"materials/models/empty_link/huke.vtf",
 }
